@@ -1,0 +1,26 @@
+mat-form-field {
+    margin-right: 12px;
+  }
+  
+  .card {
+    max-width: 450px;
+    width: 100%;
+    margin: 1rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 1rem;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    display: flex;
+    margin-left: auto;
+    font-size: 1.5rem;
+  }
+  

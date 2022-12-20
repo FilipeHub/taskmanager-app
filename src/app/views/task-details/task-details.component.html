@@ -1,0 +1,16 @@
+<h2>Task Details</h2> 
+
+<div *ngIf="task">
+  <div>
+    <label><b>Name </b></label> {{task.name}}
+  </div>
+  <div>
+    <label><b> Date</b></label> {{task.date | date: 'dd/MM/yyyy'}}
+  </div>
+  <div>
+    <label><b> Value</b></label> {{task.value}}
+  </div>
+</div>
+
+<br>
+<button (click)="list()" class="btn btn-primary">Voltar</button><br>

@@ -1,0 +1,26 @@
+<div [hidden]="submitted" class="card">
+  <form (ngSubmit)="onSubmit()">
+    <h3>Create Task</h3>
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="task.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Valor</label>
+      <input type="number" class="form-control" id="value" required [(ngModel)]="task.value" name="value">
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Data</mat-label>
+        <input matInput [matDatepicker]="picker" id="date" required [(ngModel)]="task.date" name="date" id="date">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+  </form>
+</div>
+

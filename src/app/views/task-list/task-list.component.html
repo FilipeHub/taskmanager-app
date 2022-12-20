@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de Tarefas</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Valor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks | async"
+            [ngClass]="{destacada: task.value >= 1000}"
+          >
+            <td>{{task.name}}</td>
+            <td>{{task.date | date: 'dd/MM/yyyy'}}</td>
+            <td>{{task.value}}</td>
+            <td><button (click)="deleteTask(task.id)" class="btn btn-danger">Deletar</button>
+              <button (click)="updateTask(task.id)" class="btn btn-info" style="margin-left: 10px">Editar</button>
+                <button (click)="taskDetails(task.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Do you want to confirm?</p>
+    <button type="button" class="btn btn-default" >Yes</button>
+    <button type="button" class="btn btn-primary" >No</button>
+  </div>
+</ng-template>

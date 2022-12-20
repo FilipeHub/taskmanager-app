@@ -1,0 +1,20 @@
+.panel-heading {
+    margin: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem;
+    background: #FFF;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.destacada {
+    background: #FF0;
+}
